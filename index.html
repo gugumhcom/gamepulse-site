@@ -1,0 +1,370 @@
+
+
+
+
+
+GamePulse — Your Source for Crimson Moon, Dawnwalker & A Plague Tale Legacy
+
+
+
+
+:root{--bg:#0a0a0f;--bg-elevated:#12121a;--bg-card:#1a1a26;--fg:#e8e8ed;--muted:#8888a0;--accent:#ff3366;--accent-dim:rgba(255,51,102,.15);--border:#2a2a38;--radius:12px;--font:'Inter',system-ui,-apple-system,sans-serif;--display:'Space Grotesk',sans-serif}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:var(--font);line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+img{max-width:100%;height:auto;display:block}
+
+/* Top Nav */
+.topnav{position:sticky;top:0;z-index:100;background:rgba(10,10,15,.92);backdrop-filter:blur(16px);border-bottom:1px solid var(--border)}
+.topnav .container{max-width:1200px;margin:0 auto;padding:0 24px;display:flex;align-items:center;height:64px;gap:32px}
+.topnav .logo{font-family:var(--display);font-size:22px;font-weight:700;color:var(--fg);letter-spacing:-.5px}
+.topnav .logo span{color:var(--accent)}
+.topnav nav{display:flex;gap:28px;flex:1}
+.topnav nav a{color:var(--muted);font-size:14px;font-weight:500;transition:color .2s;text-decoration:none}
+.topnav nav a:hover{color:var(--fg);text-decoration:none}
+.topnav .search-btn{width:36px;height:36px;border-radius:8px;border:1px solid var(--border);background:transparent;color:var(--muted);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:16px}
+
+/* Container */
+.container{max-width:1200px;margin:0 auto;padding:0 24px}
+
+/* Hero */
+.hero{padding:80px 0 60px;text-align:center;background:linear-gradient(180deg,var(--bg) 0%,var(--bg-elevated) 100%);border-bottom:1px solid var(--border)}
+.hero .eyebrow{font-size:12px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--accent);margin-bottom:16px}
+.hero h1{font-family:var(--display);font-size:clamp(32px,5vw,56px);font-weight:700;line-height:1.1;max-width:720px;margin:0 auto 20px}
+.hero .lead{font-size:18px;color:var(--muted);max-width:560px;margin:0 auto 32px}
+.hero-cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 24px;border-radius:9px;font-size:14px;font-weight:600;cursor:pointer;border:none;transition:all .2s;text-decoration:none}
+.btn-primary{background:var(--accent);color:#fff}.btn-primary:hover{filter:brightness(1.15);text-decoration:none;transform:translateY(-1px)}
+.btn-secondary{background:var(--bg-card);color:var(--fg);border:1px solid var(--border)}.btn-secondary:hover{border-color:var(--accent);text-decoration:none}
+
+/* Game Cards Grid */
+.games-section{padding:60px 0}
+.section-header{display:flex;justify-content:space-between;align-items:end;margin-bottom:40px;flex-wrap:wrap;gap:16px}
+.section-header h2{font-family:var(--display);font-size:28px}
+.section-header p{color:var(--muted);font-size:14px}
+.game-card{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;transition:transform .25s,border-color .25s}
+.game-card:hover{transform:translateY(-4px);border-color:var(--accent)}
+.game-card-banner{height:180px;background:linear-gradient(135deg,#1a1a2e 0%,#16213e 50%,#0f3460 100%);position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.game-card-banner::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 50%,var(--bg-card))}
+.game-tag{position:absolute;top:14px;left:14px;padding:4px 10px;border-radius:6px;font-size:11px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;z-index:2}
+.tag-crimson{background:#ff3366;color:#fff}
+.tag-dawnwalker{background:#9933ff;color:#fff}
+.tag-plague{background:#33cc99;color:#fff}
+.game-card-body{padding:24px}
+.game-card-body h3{font-family:var(--display);font-size:20px;margin-bottom:8px}
+.game-meta{display:flex;gap:16px;font-size:13px;color:var(--muted);margin-bottom:16px;flex-wrap:wrap}
+.game-meta span{display:flex;align-items:center;gap:4px}
+.game-desc{font-size:14px;color:var(--muted);line-height:1.6;margin-bottom:20px}
+.game-links{display:flex;gap:8px;flex-wrap:wrap}
+.game-links a{padding:6px 14px;border-radius:6px;font-size:12px;font-weight:600;background:var(--bg-elevated);border:1px solid var(--border);color:var(--fg);text-decoration:none;transition:border-color .2s}
+.game-links a:hover{border-color:var(--accent);text-decoration:none}
+
+.grid-3{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:24px}
+
+/* Featured Articles */
+.featured-section{padding:60px 0;background:var(--bg-elevated);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.article-row{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:24px}
+.article-card{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;transition:border-color .2s}
+.article-card:hover{border-color:var(--accent)}
+.article-thumb{height:160px;background:linear-gradient(135deg,var(--bg-elevated),var(--bg-card));display:flex;align-items:center;justify-content:center;font-size:40px}
+.article-body{padding:20px}
+.article-body .tag{font-size:11px;font-weight:700;color:var(--accent);letter-spacing:.5px;text-transform:uppercase;margin-bottom:8px}
+.article-body h3{font-size:17px;font-weight:700;margin-bottom:8px;line-height:1.3}
+.article-body h3 a{color:var(--fg);text-decoration:none}
+.article-body h3 a:hover{color:var(--accent)}
+.article-body p{font-size:13px;color:var(--muted);line-height:1.5}
+.article-date{font-size:12px;color:var(--muted);margin-top:12px}
+
+/* Stats Bar */
+.stats-bar{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1px;background:var(--border);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;margin:60px 0}
+.stat-item{background:var(--bg-elevated);padding:32px 24px;text-align:center}
+.stat-num{font-family:var(--display);font-size:36px;font-weight:700;color:var(--accent)}
+.stat-label{font-size:13px;color:var(--muted);margin-top:4px}
+
+/* Quick Links Table */
+.quick-links{padding:60px 0}
+.quick-links h2{font-family:var(--display);font-size:28px;margin-bottom:32px}
+.link-table{width:100%;border-collapse:collapse}
+.link-table th{text-align:left;font-size:12px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:1px;padding:12px 16px;border-bottom:1px solid var(--border)}
+.link-table td{padding:14px 16px;border-bottom:1px solid var(--border);font-size:14px;vertical-align:top}
+.link-table tr:hover td{background:var(--bg-elevated)}
+.link-table .game-col{font-weight:600;width:200px}
+.link-table .topic-col{width:280px}
+.link-table .status-col{width:100px}
+.status-live{color:#33cc99;font-weight:600;font-size:12px}
+.status-soon{color:#ffaa00;font-weight:600;font-size:12px}
+
+/* Footer */
+.pagefoot{padding:48px 0;border-top:1px solid var(--border);text-align:center}
+.pagefoot .logo{font-family:var(--display);font-size:20px;font-weight:700;margin-bottom:12px}
+.pagefoot p{font-size:13px;color:var(--muted);margin-bottom:8px}
+.pagefoot a{color:var(--muted)}
+
+/* Responsive */
+@media(max-width:768px){
+  .topnav nav{display:none}
+  .article-row{grid-template-columns:1fr}
+  .hero{padding:48px 0 36px}
+  .hero h1{font-size:28px}
+  .games-section,.featured-section,.quick-links{padding:40px 0}
+  .link-table{font-size:13px}
+  .link-table td,.link-table th{padding:10px 12px}
+}
+
+/* Utility */
+.rule{border:0;border-top:1px solid var(--border);margin:48px 0}
+
+
+
+
+
+
+  
+    GamePulse
+    
+      Games
+      Guides
+      News
+      About
+    
+    ⌕
+  
+
+
+
+
+  
+    Game News Hub · 2026
+    Your Complete Guide to the Hottest Upcoming Games of 2026
+    Release dates, gameplay deep-dives, system requirements, pre-order guides, and more for Crimson Moon, The Blood of Dawnwalker, and Resonance: A Plague Tale Legacy.
+    
+      Explore Games →
+      View All Guides
+    
+  
+
+
+
+
+  
+    
+      🎮 Featured GamesThree major titles dropping in August–September 2026
+    
+    
+
+      
+      
+        
+          Sep 1, 2026
+        
+        
+          Crimson Moon
+          
+            🖥️ PS5 · Xbox · PC
+            💰 $19.99
+            🎵 Metal Soundtrack
+          
+          A gothic Renaissance action RPG from ProbablyMonsters. Play as a Nephilim warrior reclaiming the fallen city of Gildenarch. Features cooperative play, dynamic difficulty, and a brutal metal soundtrack by HEALTH, Ice Nine Kills, and more.
+          
+            Release Date
+            Gameplay
+            System Req.
+            Beginner Tips
+          
+        
+      
+
+      
+      
+        
+          Sep 3, 2026
+        
+        
+          The Blood of Dawnwalker
+          
+            🖥️ PS5 · Xbox · PC
+            💰 $69.99
+            🧛 Vampire Duality
+          
+          An open-world dark fantasy RPG from Rebel Wolves (ex-The Witcher 3 team). Play as Coen, a Dawnwalker who shifts between human by day and vampire by night. Your choices shape the fate of Sangora Valley over 30 in-game days.
+          
+            Release Date
+            Vampire System
+            Pre-Order
+            Walkthrough
+          
+        
+      
+
+      
+      
+        
+          Aug 27, 2026
+        
+        
+          Resonance: A Plague Tale Legacy
+          
+            🖥️ PS5 · Xbox · PC
+            💰 ¥199 (CN)
+            ✨ Game Pass Day 1
+          
+          A bold new direction for Asobo Studio's acclaimed series. Set 15 years before Requiem, follow Sophia — a fierce plunderer armed with a grappling hook, parrying dagger, and the mysterious Minoan Sphere. Nearly all stealth is gone; action and puzzles take center stage.
+          
+            Announcement
+            New Mechanics
+            Series Timeline
+            Platforms
+          
+        
+      
+
+    
+  
+
+
+
+
+  
+    30+Guide Pages Planned
+    80+Sources Researched
+    3Games Covered
+    DailyContent Updates
+  
+
+
+
+
+  
+    
+      📖 Latest Guides & ArticlesIn-depth coverage powered by real research
+    
+
+    
+      
+        🌙
+        
+          Crimson Moon
+          Crimson Moon Release Date & Complete Launch Guide
+          Everything you need to know about the September 1st launch: pricing ($19.99 Standard / $29.99 Deluxe), platforms (PS5, Xbox Series, Steam + Epic), edition bonuses, and the full metal soundtrack lineup featuring HEALTH, Ice Nine Kills, Periphery, and more.
+          Updated Aug 26, 2026 · Sources: Game Developer PR, RPG Site, Gematsu
+        
+      
+      
+        🧛
+        
+          Dawnwalker
+          The Blood of Dawnwalker Pre-Order Guide: Which Edition Should You Buy?
+          A detailed breakdown of all four editions — Standard ($69.99), Eclipse, Day One, and Collector's (with PUREARTS Coen figurine). Includes platform prices, retailer bonuses, and what's worth your money based on 200K+ community wishlist data.
+          Updated Aug 26, 2026 · Sources: Bandai Namco Official, Icy Veins, QooApp
+        
+      
+    
+
+    
+      
+        ⚔️
+        
+          Plague Tale Legacy
+          Resonance: A Plague Tale Legacy — Why This Sequel Dropped Stealth Entirely
+          The biggest pivot in series history: Asobo replaced stealth with Sekiro-inspired parry combat, a Minoan Sphere puzzle system, and Sophia's grappling hook. We break down every confirmed mechanic change with developer quotes and extended trailer analysis.
+          Updated Aug 26, 2026 · Sources: VGTimes, 18183, GamesPress, Xmodhub
+        
+      
+      
+        ⚙️
+        
+          Crimson Moon
+          Crimson Moon System Requirements: Can Your PC Run It?
+          Official minimum and recommended specs straight from Epic Games Store: i5-9500 / GTX 1660 Ti minimum, i7-11700K / RTX 3070 recommended. Full breakdown of CPU, GPU, RAM, storage, DirectX requirements plus optimization tips.
+          Updated Aug 26, 2026 · Source: Epic Games Store (Official)
+        
+      
+    
+
+    
+      
+        🩸
+        
+          Dawnwalker
+          Dawnwalker Vampire Powers Explained: Every Ability & Build Path
+          Your complete guide to the Duality System: human daytime combat vs. vampire nighttime powers. Blood Surge AOE, Walking Fortress charge builds, health-as-resource mechanics, and how the 30-day time limit shapes every decision you make.
+          Updated Aug 26, 2026 · Sources: LootBar, GameOverdrive, The Games Wiki
+        
+      
+      
+        📜
+        
+          Plague Tale Legacy
+          A Plague Tale Timeline: Where Does Resonance Fit?
+          The definitive timeline connecting Innocence (1348), Requiem (1349), and Resonance/Legacy (1334). Includes Macula evolution stages, Amicia & Hugo's fate, why Sophia is the new protagonist, and Prima Macula's ancient origins on Minotaur Island.
+          Updated Aug 26, 2026 · Sources: CheckpointDB, EatHealthy365, Shapes.inc Fandom
+        
+      
+    
+  
+
+
+
+
+  
+    🗂️ Complete Page Matrix — All 30 Guides
+    
+      
+        
+          Game
+          Page Topic
+          Target Keyword
+          Status
+        
+      
+      
+        
+        Crimson MoonRelease Date & Launch Schedulecrimson moon release date✅ Ready
+        Crimson MoonGameplay Guide: Combat & Core Mechanicscrimson moon gameplay✅ Ready
+        Crimson MoonSystem Requirements (PC Specs)crimson moon system requirements✅ Ready
+        Crimson MoonReview: Is It Worth Buying?crimson moon review🔄 Sep 1
+        Crimson MoonStory Explained: Lore & Plot Breakdowncrimson moon story explained✅ Ready
+        Crimson MoonBest Builds: Classes & Skill Comboscrimson moon best builds🔄 Post-launch
+        Crimson MoonBeginner Tips: 20 Things I Wish I Knewcrimson moon beginner tips✅ Ready
+        Crimson Moonvs Dark Souls & Elden Ring Comparisoncrimson moon vs similar games✅ Ready
+        Crimson MoonSecrets, Easter Eggs & Hidden Contentcrimson moon secrets🔄 Post-launch
+        Crimson MoonDLC Roadmap & Future Updatescrimson moon dlc updates🔄 TBD
+        
+        DawnwalkerRelease Date: Everything We Knowdawnwalker release date✅ Ready
+        DawnwalkerGameplay: What Makes It Unique?dawnwalker gameplay✅ Ready
+        DawnwalkerVampire Duality System: All Powersdawnwalker vampire mechanics✅ Ready
+        DawnwalkerCharacters: Cast & Backstoriesdawnwalker characters✅ Ready
+        DawnwalkerPre-Order Guide: Editions & Bonusesdawnwalker pre order bonus✅ Ready
+        DawnwalkerHow Long to Beat? Playtime Breakdowndawnwalker length🔄 Sep 3
+        DawnwalkerDeveloper: Rebel Wolves Studio Historydawnwalker developer✅ Ready
+        DawnwalkerWalkthrough: Chapter-by-Chapter Guidedawnwalker walkthrough🔄 Sep 3
+        DawnwalkerBoss Guide: How to Beat Every Major Enemydawnwalker boss guide🔄 Sep 3
+        DawnwalkerLatest News: Trailers & Updatesdawnwalker news latest✅ Ready
+        
+        Plague TaleAnnouncement: First Details & Trailerplague tale legacy announcement✅ Ready
+        Plague TaleSeries Timeline: Where Does Legacy Fit?plague tale timeline✅ Ready
+        Plague TaleWhat Happened to Amicia & Hugo?amicia hugo fate legacy✅ Ready
+        Plague TaleGameplay Changes: New Mechanics Revealedplague tale legacy gameplay changes✅ Ready
+        Plague TaleRat/Plague System Evolutionplague tale rats plague🔄 Revised
+        Plague TaleSeries Comparison: Innocence vs Requiem vs Legacyplague tale comparison✅ Ready
+        Plague TaleAchievement & Trophy Guide (100%)plague tale achievements🔄 Aug 27
+        Plague TaleEnding Explained (Full Spoilers)plague tale ending explained🔄 Aug 27
+        Plague TaleCollectibles Guide: All Item Locationsplague tale collectibles🔄 Aug 27
+        Plague TalePlatforms: PS5, Xbox, PC & Game Passplague tale platforms✅ Ready
+      
+    
+  
+
+
+
+
+  
+    GamePulse
+    Your source for Crimson Moon, The Blood of Dawnwalker, and A Plague Tale Legacy guides.
+    Built with research from 80+ official sources, media outlets, and community wikis.
+    © 2026 GamePulse. Not affiliated with ProbablyMonsters, Rebel Wolves, Asobo Studio, or Focus Entertainment.All trademarks belong to their respective owners.
+  
+
+
+
+
